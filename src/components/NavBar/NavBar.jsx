@@ -1,22 +1,15 @@
 import React, { useState } from "react";
 import logo from "../../assets/portfolio logo.png";
 import { Link } from "react-scroll";
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaLinkedinIn,
-} from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#14213d] text-[#fca311]  ">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 backdrop-blur-[30px] bg-[#ffffff10] text-[#fca311]  ">
       <div>
         <Link to="home" smooth={true} duration={500}>
           <img src={logo} alt="logo" style={{ width: "100px" }} />
